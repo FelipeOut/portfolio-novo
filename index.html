@@ -17,14 +17,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-theme="light">
+
     <header>
         <div class="interface">
             <div class="logo">
                 <a href="#">
-                    <img src="img/logosite.png" alt="logo do site">
+                    <img id="headerLogo" src="img/logositemododark.png" alt="logo do site">
                 </a>
-            </div><!--logo-->
+            </div><!--Logo-->
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="#">Inicio</a></li>
@@ -34,7 +35,8 @@
                 </ul>
             </nav>
             <div class="btn-contato">
-                <a href="https://wa.me/5511988866698?text=Obrigado+por+entregar+em+contato+comigo%2C+fa%C3%A7a+seu+or%C3%A7amento%21">
+                <a
+                    href="https://wa.me/5511988866698?text=Obrigado+por+entregar+em+contato+comigo%2C+fa%C3%A7a+seu+or%C3%A7amento%21">
                     <button>WHATSAPP</button>
                 </a>
             </div><!--btn-contato-->
@@ -53,12 +55,19 @@
                         <li><a href="#especialidades1">Especialidades</a></li>
                         <li><a href="#sobre2">Sobre</a></li>
                         <li><a href="#projetos3">Projetos</a></li>
-                        <li><a href="https://wa.me/5511988866698?text=Obrigado+por+entregar+em+contato+comigo%2C+fa%C3%A7a+seu+or%C3%A7amento%21">Contato</a></li>
+                        <li><a
+                                href="https://wa.me/5511988866698?text=Obrigado+por+entregar+em+contato+comigo%2C+fa%C3%A7a+seu+or%C3%A7amento%21">Contato</a>
+                        </li>
                     </ul>
-                </nav>    
+                </nav>
             </div><!--menu-mobile-->
             <div class="overlay-menu" id="overlay-menu"></div>
+            <div class="theme-toggle">
+                <i class="bi bi-moon-fill" id="theme-toggle-dark-icon" style="display:none; cursor:pointer;"></i>
+                <i class="bi bi-sun-fill" id="theme-toggle-light-icon" style="cursor:pointer;"></i>
+            </div>
         </div><!--interface-->
+
     </header>
 
     <main>
@@ -66,7 +75,7 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
-                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL</h1>
                         <p>Sou um Designer Gráfico formado, apaixonado por traduzir ideias
                             em imagens cativantes. Atualmente, estou imerso no mundo da Análise
                             e Desenvolvimento de Sistemas, onde aprimoro minha habilidade em dar
@@ -76,13 +85,14 @@
                             profissional, mas também destaca a importância de abraçar a criatividade
                             e a tecnologia para construir experiências impactantes e eficientes.</p>
                         <div class="btn-contato">
-                            <a href="https://wa.me/5511988866698?text=Obrigado+por+entregar+em+contato+comigo%2C+fa%C3%A7a+seu+or%C3%A7amento%21">
+                            <a
+                                href="https://wa.me/5511988866698?text=Obrigado+por+entregar+em+contato+comigo%2C+fa%C3%A7a+seu+or%C3%A7amento%21">
                                 <button>Entre em contato via Whatsapp</button>
                             </a>
                         </div>
                     </div><!--txt-top-site-->
                     <div class="img-topo-site">
-                        <img src="img/minha foto.png" alt="minha foto">
+                        <img src="img/minha-foto1.png" alt="minha foto">
                     </div><!--img-topo-site-->
                 </div><!--flex-->
             </div><!--interface-->
@@ -136,22 +146,15 @@
                     </div><!--Fim Img Sobre-->
                     <div class="txt-sobre"><!--Txt sobre-->
                         <h2>MUITO PRAZER, <span>SOU FELIPE SANTOS</span></h2>
-                        <p>Meu nome é Felipe dos Santos, tenho 24 anos e sou um Designer Gráfico formado pela
-                            Universidade Nove de Julho desde 2019. Com seis anos de experiência na área de design, venho
-                            aprimorando minhas habilidades e desenvolvendo projetos que refletem minha paixão pela
-                            estética e criatividade. Ao longo desse período, tive a oportunidade de trabalhar em
-                            diversos projetos desafiadores, aprimorando meu olhar crítico e técnico. Em 2022, decidi
-                            expandir meu conhecimento e habilidades, ingressando na faculdade para cursar Análise e
-                            Desenvolvimento de Sistemas. Nessa nova jornada, meu foco principal é aprofundar-me em
-                            linguagens de programação como HTML, CSS e JS, visando ampliar meu leque de competências e
-                            contribuir de forma mais abrangente para o mundo do design e desenvolvimento web.</p>
-                        <p>Com uma base sólida em Design Gráfico e o entusiasmo em aprender sobre sistemas e
-                            programação, estou determinado a integrar essas duas áreas, proporcionando soluções
-                            inovadoras e esteticamente agradáveis. Acredito que essa combinação de habilidades me
-                            permitirá enfrentar desafios multidisciplinares, contribuindo para um ambiente criativo e
-                            tecnologicamente avançado. Estou animado para explorar as interseções entre design e
-                            desenvolvimento, alavancando minha experiência e conhecimento para criar soluções
-                            impactantes e visualmente atraentes.</p>
+                        <p>
+                            Sou Felipe dos Santos, tenho 24 anos e sou formado em Design Gráfico pela Universidade Nove de Julho 
+                            desde 2019. Com seis anos de experiência, estou sempre aprimorando minhas habilidades e trabalhando 
+                            em projetos que refletem minha paixão pela estética e criatividade. Recentemente, em 2022, decidi 
+                            expandir meus conhecimentos ingressando em Análise e Desenvolvimento de Sistemas, com o objetivo de 
+                            me aprofundar em linguagens de programação como HTML, CSS e JS. Isso visa ampliar minhas competências 
+                            e me permitir contribuir ainda mais para o design e o desenvolvimento web. Com uma base sólida em Design 
+                            Gráfico e um crescente entusiasmo por sistemas e programação, estou determinado a unir essas áreas, 
+                            oferecendo soluções inovadoras e esteticamente agradáveis. Acredito que essa combinação de habilidades me capacitará a enfrentar desafios multidisciplinares e a criar soluções impactantes e visualmente atraentes.</p>
                         <div class="btn-social">
                             <a href="https://www.instagram.com/felipees10/"><button><i
                                         class="bi bi-instagram"></i></button></a>
@@ -166,18 +169,147 @@
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(img/socialmedia-e-site.png);">
-                        <div class="overlay">Social Media</div>
+                    <div class="img-port" id="imagem1" style="background-image: url(img/socialmedia.jpg);">
+                        <div class="overlay" data-target="galeria1">Social Media</div>
                     </div>
-                    <div class="img-port" style="background-image: url(img/ilustracoes.png);">
-                        <div class="overlay">Ilustrações</div>
+                    <div class="img-port" id="imagem4" style="background-image: url(img/apresentacao.jpg);">
+                        <div class="overlay" data-target="galeria4">Apresentações</div>
                     </div>
-                    <div class="img-port" style="background-image: url(img/fotografia.png);">
-                        <div class="overlay">Fotografias</div>
+                    <div class="img-port" id="imagem2" style="background-image: url(img/ilustracoes.png);">
+                        <div class="overlay" data-target="galeria2">Ilustrações</div>
+                    </div>
+                    <div class="img-port" id="imagem3" style="background-image: url(img/fotografias.jpg);">
+                        <div class="overlay" data-target="galeria3">Fotografias</div>
                     </div>
                 </div>
             </div><!--Interface-->
         </section><!--Fim portfolio-->
+        <!-- Galeria de imagens -->
+        <div id="galeria1" class="galeria">
+            <span class="fechar" onclick="fecharGaleria('galeria1')">&times;</span>
+            <div class="conteudo-galeria">
+                <img id="imagemGrande" src="img/garagem1.png" alt="Imagem na Galeria">
+                <div class="navegacao">
+                    <button class="anterior" onclick="mudarImagem(-1)">&#10094;</button>
+                    <button class="proxima" onclick="mudarImagem(1)">&#10095;</button>
+                </div>
+                <div class="miniaturas-container">
+                    <div class="miniaturas">
+                        <img src="img/garagem2.png" alt="Miniatura 1" onclick="mostrarImagem('img/garagem2.png')">
+                        <img src="img/garagem3.png" alt="Miniatura 2" onclick="mostrarImagem('img/garagem3.png')">
+                        <img src="img/garagem4.png" alt="Miniatura 3" onclick="mostrarImagem('img/garagem4.png')">
+                        <img src="img/garagem5.png" alt="Miniatura 4" onclick="mostrarImagem('img/garagem5.png')">
+                        <img src="img/seuze1.png" alt="Miniatura 5" onclick="mostrarImagem('img/seuze1.png')">
+                        <img src="img/seuze2.png" alt="Miniatura 6" onclick="mostrarImagem('img/seuze2.png')">
+                        <img src="img/seuze3.png" alt="Miniatura 7" onclick="mostrarImagem('img/seuze3.png')">
+                        <img src="img/central1.png" alt="Miniatura 8" onclick="mostrarImagem('img/central1.png')">
+                        <img src="img/central2.png" alt="Miniatura 9" onclick="mostrarImagem('img/central2.png')">
+                        <img src="img/central3.png" alt="Miniatura 10" onclick="mostrarImagem('img/central3.png')">
+                        <img src="img/central4.png" alt="Miniatura 11" onclick="mostrarImagem('img/central4.png')">
+                        <img src="img/central5.png" alt="Miniatura 12" onclick="mostrarImagem('img/central5.png')">
+                        <img src="img/central6.png" alt="Miniatura 13" onclick="mostrarImagem('img/central6.png')">
+                        <img src="img/Postagem de provedor de internet.jpg" alt="Miniatura 14"
+                            onclick="mostrarImagem('img/Postagem de provedor de internet.jpg')">
+                        <img src="img/postagem para instagram restaurante (1).jpg" alt="Miniatura 15"
+                            onclick="mostrarImagem('img/postagem para instagram restaurante (1).jpg')">
+                        <img src="img/postagem de curso de ingles.jpg" alt="Miniatura 16"
+                            onclick="mostrarImagem('mg/postagem de curso de ingles.jpg')">
+                        <!-- Adicione mais miniaturas conforme necessário -->
+                    </div>
+                </div><!--fim miniatura container-->
+                <!-- <button class="anterior" onclick="mudarImagem(-1)">&#10094;</button>
+                <button class="proxima" onclick="mudarImagem(1)">&#10095;</button> -->
+            </div>
+        </div>
+        <div id="galeria2" class="galeria">
+            <span class="fechar" onclick="fecharGaleria('galeria2')">&times;</span>
+            <div class="conteudo-galeria">
+                <img id="imagemGrande" src="img/chris.png" alt="Imagem na Galeria">
+                <div class="navegacao">
+                    <button class="anterior" onclick="mudarImagem(-1)">&#10094;</button>
+                    <button class="proxima" onclick="mudarImagem(1)">&#10095;</button>
+                </div>
+                <div class="miniaturas-container">
+                    <div class="miniaturas">
+                        <img src="img/chris.png" alt="Miniatura 1" onclick="mostrarImagem('img/chris.png')">
+                        <img src="img/matheus.png" alt="Miniatura 2" onclick="mostrarImagem('img/matheus.png')">
+                        <img src="img/paulinho.png" alt="Miniatura 3" onclick="mostrarImagem('img/paulinho.png')">
+                        <img src="img/super.png" alt="Miniatura 4" onclick="mostrarImagem('img/super.png')">
+                        <!-- Adicione mais miniaturas conforme necessário -->
+                    </div>
+                </div><!--fim miniatura container-->
+                <!-- <button class="anterior" onclick="mudarImagem(-1)">&#10094;</button>
+                <button class="proxima" onclick="mudarImagem(1)">&#10095;</button> -->
+            </div>
+        </div>
+        <div id="galeria3" class="galeria">
+            <span class="fechar" onclick="fecharGaleria('galeria3')">&times;</span>
+            <div class="conteudo-galeria">
+                <img id="imagemGrande" src="img/Fotografia13.jpg" alt="Imagem na Galeria">
+                <div class="navegacao">
+                    <button class="anterior" onclick="mudarImagem(-1)">&#10094;</button>
+                    <button class="proxima" onclick="mudarImagem(1)">&#10095;</button>
+                </div>
+                <div class="miniaturas-container">
+                    <div class="miniaturas">
+                        <img src="img/Fotografia1.jpg" alt="Miniatura 1" onclick="mostrarImagem('img/Fotografia1.png')">
+                        <img src="img/Fotografia2.jpg" alt="Miniatura 2" onclick="mostrarImagem('img/Fotografia2.png')">
+                        <img src="img/Fotografia3.jpg" alt="Miniatura 3" onclick="mostrarImagem('img/Fotografia3.png')">
+                        <img src="img/Fotografia4.jpg" alt="Miniatura 4" onclick="mostrarImagem('img/Fotografia4.png')">
+                        <img src="img/Fotografia5.jpg" alt="Miniatura 5" onclick="mostrarImagem('img/Fotografia5.png')">
+                        <img src="img/Fotografia6.jpg" alt="Miniatura 6" onclick="mostrarImagem('img/Fotografia6.png')">
+                        <img src="img/Fotografia7.jpg" alt="Miniatura 7" onclick="mostrarImagem('img/Fotografia7.png')">
+                        <img src="img/Fotografia8.jpg" alt="Miniatura 8" onclick="mostrarImagem('img/Fotografia8.png')">
+                        <img src="img/Fotografia9.jpg" alt="Miniatura 9" onclick="mostrarImagem('img/Fotografia9.png')">
+                        <img src="img/Fotografia10.jpg" alt="Miniatura 10" onclick="mostrarImagem('img/Fotografia10.png')">
+                        <img src="img/Fotografia11.jpg" alt="Miniatura 11" onclick="mostrarImagem('img/Fotografia11.png')">
+                        <img src="img/Fotografia12.jpg" alt="Miniatura 12" onclick="mostrarImagem('img/Fotografia12.png')">
+                    </div>
+                </div><!--fim miniatura container-->
+                <!-- <button class="anterior" onclick="mudarImagem(-1)">&#10094;</button>
+                <button class="proxima" onclick="mudarImagem(1)">&#10095;</button> -->
+            </div>
+        </div>
+        <div id="galeria4" class="galeria">
+            <span class="fechar" onclick="fecharGaleria('galeria4')">&times;</span>
+            <div class="conteudo-galeria">
+                <img id="imagemGrande" src="img/mont.jpg" alt="Imagem na Galeria">
+                <div class="navegacao">
+                    <button class="anterior" onclick="mudarImagem(-1)">&#10094;</button>
+                    <button class="proxima" onclick="mudarImagem(1)">&#10095;</button>
+                </div>
+                <div class="miniaturas-container">
+                    <div class="miniaturas">
+                        <img src="img/mont1.jpg" alt="Miniatura 1" onclick="mostrarImagem('img/mont1.jpg')">
+                        <img src="img/mont2.jpg" alt="Miniatura 2" onclick="mostrarImagem('img/mont2.jpg')">
+                        <img src="img/mont3.jpg" alt="Miniatura 3" onclick="mostrarImagem('img/mont3.jpg')">
+                        <img src="img/mont4.jpg" alt="Miniatura 4" onclick="mostrarImagem('img/mont4.jpg')">
+                        <img src="img/mont5.jpg" alt="Miniatura 5" onclick="mostrarImagem('img/mont5.jpg')">
+                        <img src="img/mont6.jpg" alt="Miniatura 6" onclick="mostrarImagem('img/mont6.jpg')">
+                        <img src="img/mont7.jpg" alt="Miniatura 7" onclick="mostrarImagem('img/mont7.jpg')">
+                        <img src="img/sorridents.jpg" alt="Miniatura 8" onclick="mostrarImagem('img/sorridents.jpg')">
+                        <img src="img/sorridents1.jpg" alt="Miniatura 9" onclick="mostrarImagem('img/sorridents1.jpg')">
+                        <img src="img/sorridents2.jpg" alt="Miniatura 10" onclick="mostrarImagem('img/sorridents2.jpg')">
+                        <img src="img/sorridents3.jpg" alt="Miniatura 11" onclick="mostrarImagem('img/sorridents3.jpg')">
+                        <img src="img/sorridents4.jpg" alt="Miniatura 12" onclick="mostrarImagem('img/sorridents4.jpg')">
+                        <img src="img/sorridents5.jpg" alt="Miniatura 13" onclick="mostrarImagem('img/sorridents5.jpg')">
+                        <img src="img/sorridents6.jpg" alt="Miniatura 14" onclick="mostrarImagem('img/sorridents6.jpg')">
+                        <img src="img/sorridents7.jpg" alt="Miniatura 15" onclick="mostrarImagem('img/sorridents7.jpg')">
+                        <img src="img/sorridents8.jpg" alt="Miniatura 16" onclick="mostrarImagem('img/sorridents8.jpg')">
+                        <img src="img/sorridents9.jpg" alt="Miniatura 17" onclick="mostrarImagem('img/sorridents9.jpg')">
+                        <img src="img/sorridents10.jpg" alt="Miniatura 18" onclick="mostrarImagem('img/sorridents10.jpg')">
+                        <img src="img/sorridents11.jpg" alt="Miniatura 19" onclick="mostrarImagem('img/sorridents11.jpg')">
+                        <img src="img/site1.png" alt="Miniatura 20" onclick="mostrarImagem('img/site1.png')">
+                        <img src="img/site2.png" alt="Miniatura 21" onclick="mostrarImagem('img/site2.png')">
+                        <img src="img/site3.png" alt="Miniatura 22" onclick="mostrarImagem('img/site3.png')">
+                    </div>
+                </div><!--fim miniatura container-->
+            </div>
+        </div>
+        </div>
+        <!-- Adicione mais imagens conforme necessário -->
+        </div>
+        </div>
         <section class="formulario">
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
@@ -196,7 +328,7 @@
             <div class="line-footer">
                 <div class="flex">
                     <div class="logo-footer">
-                        <img src="img/logosite.png" alt="Logo">
+                        <img id="footerLogo" src="img/logositemododark.png" alt="Logo">
                     </div><!--Logo Footer-->
                     <div class="btn-social">
                         <a href="https://www.instagram.com/felipees10/"><button><i
@@ -212,7 +344,7 @@
             </div><!--Fim line-footer-->
         </div><!--Fim interface-->
     </footer>
-    
+
 </body>
 
 </html>
