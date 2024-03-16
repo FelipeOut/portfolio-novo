@@ -568,9 +568,17 @@ section.portfolio .flex {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    justify-content: left; /* Centraliza os itens (miniaturas) horizontalmente */
+    justify-content:left; /* Centraliza os itens (miniaturas) horizontalmente */
     gap: 10px; 
     padding: 10px 0;
+}
+
+.galeria-centralizada .miniaturas-container {
+    justify-content: center;
+}
+
+#galeria2 .miniaturas-container {
+    justify-content: center;
 }
 
 .miniaturas img {
