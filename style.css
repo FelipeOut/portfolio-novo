@@ -558,12 +558,17 @@ section.portfolio .flex {
     /* Espaço entre a imagem principal e as miniaturas */
 }
 
+.miniaturas img.ativa {
+    border: 2px solid #B71515; /* Cor de destaque */
+    box-shadow: 0 0 8px #B71515; /* Sombra leve */
+}
+
 /* Adiciona os estilos para o container das miniaturas */
 .miniaturas-container {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    justify-content: center; /* Centraliza os itens (miniaturas) horizontalmente */
+    justify-content: left; /* Centraliza os itens (miniaturas) horizontalmente */
     gap: 10px; 
     padding: 10px 0;
 }
@@ -850,27 +855,23 @@ footer .line-footer p a {
         /* Espaçamento interno para facilidade de toque */
     }
 
-    /* Posiciona as setas de navegação de forma mais visível */
-    .navegacao .anterior,
-    .navegacao .proxima {
-        font-size: 20px;
-        /* Reduz o tamanho das setas para evitar sobreposição */
+    /* Ajusta a navegação para exibir as setas abaixo da imagem */
+    .galeria .navegacao {
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
         top: auto;
-        /* Desativa o posicionamento pelo topo */
-        bottom: 20px;
-        /* Posiciona as setas na parte inferior da imagem */
+        transform: none;
+        margin-top: 20px; /* Espaço entre a imagem e as setas */
     }
 
-    /* Ajusta o posicionamento das setas para não sobrepor a imagem */
-    .navegacao .anterior {
-        left: 20px;
-        /* Aumenta o espaço do lado esquerdo */
+    /* Estiliza as setas para aparecerem uma ao lado da outra abaixo da imagem */
+    .galeria .navegacao .anterior,
+    .galeria .navegacao .proxima {
+        position: relative;
+        margin: 0 10px; /* Espaçamento entre as setas */
     }
 
-    .navegacao .proxima {
-        right: 20px;
-        /* Aumenta o espaço do lado direito */
-    }
 
     /* Ajustes adicionais para as miniaturas */
     .miniaturas img {

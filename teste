@@ -52,28 +52,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Inicializa destacando a primeira miniatura ao abrir a galeria
     function abrirGaleria(id) {
         const galeria = document.getElementById(id);
         if (galeria) {
             galeria.style.display = 'block';
             galeriaAtiva = galeria;
             imagensAtuais = Array.from(galeria.querySelectorAll('.miniaturas img')).map(img => img.src);
-            atualizarMiniaturaAtiva(0); // Destaca e centraliza a primeira miniatura
-            // Adiciona a lógica para definir a primeira imagem grande, se necessário
-            const primeiraImagemGrande = imagensAtuais[0];
-            galeria.querySelector('#imagemGrande').src = primeiraImagemGrande;
+            destacarMiniatura(0); // Inicializa com a primeira miniatura destacada
         }
-    }
-
-    function atualizarMiniaturaAtiva(indiceAtual) {
-        const miniaturas = galeriaAtiva.querySelectorAll('.miniaturas img');
-        miniaturas.forEach((img, index) => {
-            img.classList.toggle('ativa', index === indiceAtual);
-            if (index === indiceAtual) {
-                const scrollAmount = img.offsetLeft - img.closest('.miniaturas-container').offsetWidth / 2 + img.offsetWidth / 2;
-                img.closest('.miniaturas-container').scrollLeft = scrollAmount;
-            }
-        });
     }
 
     // Função para fechar a galeria ativa
@@ -117,7 +104,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (indiceAtual < 0) indiceAtual = imagensAtuais.length - 1;
         else if (indiceAtual >= imagensAtuais.length) indiceAtual = 0;
         imagemGrande.src = imagensAtuais[indiceAtual];
-        atualizarMiniaturaAtiva(indiceAtual);
+        
+        // Atualizar o destaque da miniatura
+        const miniaturas = galeriaAtiva.querySelectorAll('.miniaturas img');
+        miniaturas.forEach(miniatura => miniatura.classList.remove('miniatura-destaque'));
+        miniaturas[indiceAtual].classList.add('miniatura-destaque');
     }
 
     function destacarMiniatura(indice) {
@@ -134,12 +125,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Assegure-se de chamar a função `destacarMiniatura` também quando as miniaturas são clicadas diretamente
-    document.querySelectorAll('.miniaturas img').forEach(img => {
+    document.querySelectorAll('.miniaturas img').forEach((img, index) => {
         img.addEventListener('click', function () {
             const galeria = this.closest('.galeria');
-            const selecionada = Array.from(galeria.querySelectorAll('.miniaturas img')).indexOf(this);
             galeria.querySelector('#imagemGrande').src = this.src;
-            atualizarMiniaturaAtiva(selecionada);
+            
+            // Remover destaque das outras miniaturas
+            galeria.querySelectorAll('.miniaturas img').forEach(miniatura => miniatura.classList.remove('miniatura-destaque'));
+            
+            // Adicionar destaque à miniatura clicada
+            this.classList.add('miniatura-destaque');
+            
+            // Atualizar a lista de imagensAtuais para corresponder à miniatura clicada
+            let imagensAtuais = Array.from(galeria.querySelectorAll('.miniaturas img')).map(img => img.src);
+            let indiceAtual = imagensAtuais.indexOf(this.src);
         });
     });
 
