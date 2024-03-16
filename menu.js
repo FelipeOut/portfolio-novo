@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.style.display = menu.classList.contains('abrir-menu') ? 'block' : 'none';
     });
 
+    // Fechar o menu mobile ao clicar no botão "X"
+    document.querySelector('.menu-mobile .btn-fechar').addEventListener('click', function () {
+        menu.classList.remove('abrir-menu');
+        overlay.style.display = 'none';
+    });
+
     document.querySelectorAll('.galeria .btn-fechar, .overlay').forEach(btn => {
         btn.addEventListener('click', function () {
             if (this.classList.contains('btn-fechar')) {
@@ -55,16 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Revisão do fechamento de galerias
-    document.querySelectorAll('.galeria .fechar').forEach(fechar => {
-        fechar.addEventListener('click', function () {
-            this.parentElement.style.display = 'none';
-            if (galeriaAtiva === this.parentElement) {
-                galeriaAtiva = null; // Reseta a galeria ativa
-            }
-        });
-    });
-
     document.querySelectorAll('.navegacao button').forEach(button => {
         button.addEventListener('click', function () {
             const direcao = this.classList.contains('anterior') ? -1 : 1;
@@ -99,28 +95,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const headerLogo = document.getElementById('headerLogo');
         const footerLogo = document.getElementById('footerLogo');
         if (newTheme === 'dark') {
-            headerLogo.src = 'img/logositemododark.png'; // Caminho do logo para o tema escuro
-            footerLogo.src = 'img/logositemododark.png'; // Atualize se necessário
+            headerLogo.src = 'img/logositemododark.png';
+            footerLogo.src = 'img/logositemododark.png';
         } else {
-            headerLogo.src = 'img/logositemodolight.png'; // Caminho do logo para o tema claro
-            footerLogo.src = 'img/logositemodolight.png'; // Atualize se necessário
+            headerLogo.src = 'img/logositemodolight.png';
+            footerLogo.src = 'img/logositemodolight.png';
         }
     }
 
-    // Adicione esta chamada para garantir que os logos sejam atualizados quando a página for carregada
-    toggleTheme();
+    toggleTheme(); // Assegura que o tema seja aplicado ao carregar
 
     themeToggleDarkIcon.addEventListener('click', toggleTheme);
     themeToggleLightIcon.addEventListener('click', toggleTheme);
 
-
-    themeToggleDarkIcon.addEventListener('click', toggleTheme);
-    themeToggleLightIcon.addEventListener('click', toggleTheme);
-
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        toggleTheme();
-    }
-    
-    
 });
+
 

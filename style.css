@@ -82,6 +82,11 @@ body {
     /* Muda a cor para vermelho no hover */
 }
 
+/* Altera a cor do texto para preto no menu mobile quando o tema light está ativo */
+[data-theme="light"] .menu-mobile nav ul li a {
+    color: #000; /* Cor preta para o texto */
+}
+
 /* Altera a cor do texto e do ícone do e-mail no rodapé para o modo claro */
 [data-theme="light"] .line-footer.borda p,
 [data-theme="light"] .line-footer.borda p a,
