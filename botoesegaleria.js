@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const scroll = new SmoothScroll('nav a[href*="#"]', {
         speed: 800,
@@ -8,8 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let btnMenu = document.getElementById('btn-menu');
     let menu = document.getElementById('menu-mobile');
     let overlay = document.getElementById('overlay-menu');
-    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
     let galeriaAtiva = null;
     let imagensAtuais = [];
 
@@ -144,106 +141,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Novo código: inicialize o toggle switch para o tema escuro/cláro.
-    const themeSwitch = document.getElementById('theme-switch');
-    themeSwitch.addEventListener('change', function () {
-        document.body.classList.toggle('dark-theme'); // Alternar classe tema escuro.
-        const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-        document.body.setAttribute('data-theme', theme);
-        updateThemeIcons(theme); // Atualiza os ícones e logos conforme o tema.
-    });
-
-    function toggleTheme() {
-        const newTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        document.body.setAttribute('data-theme', newTheme);
-        themeToggleLightIcon.style.display = newTheme === 'dark' ? 'none' : 'block';
-        themeToggleDarkIcon.style.display = newTheme === 'dark' ? 'block' : 'none';
-
-        // Atualiza os logos para o tema claro ou escuro
-        const headerLogo = document.getElementById('headerLogo');
-        const footerLogo = document.getElementById('footerLogo');
-        if (newTheme === 'dark') {
-            headerLogo.src = 'img/logositemododark.png'; // Caminho do logo para o tema escuro
-            footerLogo.src = 'img/logositemododark.png'; // Atualize se necessário
-        } else {
-            headerLogo.src = 'img/logositemodolight.png'; // Caminho do logo para o tema claro
-            footerLogo.src = 'img/logositemodolight.png'; // Atualize se necessário
-        }
-    }
-
-
-    // Verifica a preferência do sistema do usuário para o tema escuro/cláro e ajusta o tema do site e o toggle switch conforme necessário.
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !themeSwitch.checked) {
-        themeSwitch.checked = true;
-        document.body.classList.add('dark-theme');
-        document.body.setAttribute('data-theme', 'dark');
-        updateThemeIcons('dark');
-    }
-
-    function formatarTelefone(input) {
-        // Remove todos os caracteres que não são dígitos
-        var digitos = input.value.replace(/\D/g, '');
-
-        // Formatar o número de telefone com parênteses
-        if (digitos.length >= 2) {
-            digitos = '(' + digitos.substring(0, 2) + ')' + digitos.substring(2);
-        }
-
-        // Atualizar o valor do campo de entrada
-        input.value = digitos;
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("form");
-        const result = document.getElementById("result");
-    
-        form.onsubmit = function (e) {
-            e.preventDefault(); // Garante que o comportamento padrão seja prevenido.
-    
-            const formData = new FormData(form);
-            var object = {};
-            formData.forEach((value, key) => {
-                object[key] = value;
-            });
-            var json = JSON.stringify(object);
-    
-            result.innerHTML = "Por favor, espere um pouco...";
-            result.style.display = "block"; // Certifique-se de que a mensagem de resultado seja visível.
-    
-            fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    result.innerHTML = json.message;
-                    result.classList.remove("text-gray-500");
-                    result.classList.add("text-green-500");
-                } else {
-                    console.log(response);
-                    result.innerHTML = json.message;
-                    result.classList.remove("text-gray-500");
-                    result.classList.add("text-red-500");
-                }
-            })
-            .catch((error) => {
-                console.log(error);
-                result.innerHTML = "Ocorreu um erro!";
-            })
-            .then(function () {
-                form.reset(); // Resetar o formulário após o envio.
-                setTimeout(() => {
-                    result.style.display = "none"; // Opcional: Esconder a mensagem de resultado após algum tempo.
-                }, 5000);
-            });
-    
-            return false; // Outra camada de prevenção para o comportamento padrão.
-        };
-    });
-    
 });
