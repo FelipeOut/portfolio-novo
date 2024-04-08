@@ -652,15 +652,7 @@ section.portfolio .flex {
     cursor: pointer;
 }
 
-
-
-
-.botao {
-    
-    border: none;
-    
-
-}
+/* ESTILO DO BOTAO "LEIA MAIS"*/
 
 .botao {
     margin: 20px auto;
@@ -778,6 +770,8 @@ a {
     color: #333;
     text-decoration: none;
 }
+
+/* FIM DO ESTILO DO BOTAO "LEIA MAIS"*/
 
 /* Botão de fechar */
 .close-btn {
@@ -1771,6 +1765,10 @@ ul {
 @media screen and (max-width:768px) {
     /*CLASSES GERAIS*/
 
+    .theme-switch {
+        display: none;
+    }
+
     .flex {
         flex-direction: column-reverse;
     }
@@ -1795,6 +1793,26 @@ ul {
     }
 
     /*TOPO DO SITE*/
+
+    /* ESTILO DO MEU "TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL*/
+
+    #typing-animation {
+        font-size: 24px; /* Reduz o tamanho da fonte para se adequar melhor a telas menores */
+        /* Mantém overflow: hidden; */
+    }
+
+    .typing-cursor {
+        width: 1.5px; /* Reduz a largura do cursor para corresponder ao novo tamanho de fonte */
+        height: 0.9em; /* Ajusta a altura para manter a proporção com o novo tamanho de fonte */
+        /* Mantém vertical-align: bottom; */
+        /* Mantém margin-left: 2px; */
+        /* Mantém animation: blink 11s infinite; */
+    }
+
+    /* Opcionalmente, você pode ajustar a duração da animação para se adequar melhor à experiência do usuário em dispositivos móveis */
+    .typing-cursor {
+        animation: blink 8s infinite; /* Ajusta para uma duração menor, se desejado */
+    }
 
     section.topo-do-site .flex {
         gap: 40px;
@@ -1946,6 +1964,43 @@ ul {
         /* Espaço extra na parte inferior */
     }
 
+    .botao {
+        width: 10em; /* Permite que o botão se ajuste ao conteúdo */
+        padding: 0.60em 2em; /* Ajusta o padding para um tamanho mais adequado */
+        margin: 20px auto 30px; /* Aumenta o espaço abaixo do botão para evitar sobreposição */
+    }
+
+    /*FORMULARIO*/
+
+    .form-container {
+        width: 100%; /* Ajusta para a largura total da tela */
+        padding: 20px; /* Reduz o padding para se adaptar a telas menores */
+    }
+
+    .formulario .interface .container,
+    form {
+        max-width: 100%; /* Permite que o formulário se expanda até a borda da tela */
+        margin: 0 20px; /* Adiciona uma margem pequena nas laterais para evitar que o formulário toque as bordas */
+    }
+
+    section.formulario {
+        padding: 20px; /* Ajusta o padding para manter consistência */
+    }
+
+    .formulario .interface .flex {
+        flex-direction: column; /* Empilha os elementos verticalmente para melhor utilização do espaço */
+    }
+
+    .form-container .form-group input,
+    .form-container .form-group textarea {
+        padding: 12px; /* Ajusta o padding para inputs e textareas para melhorar a legibilidade */
+    }
+
+    .form-container .form-submit-btn {
+        padding: 15px; /* Reduz o padding do botão para se adaptar ao novo layout */
+        font-size: 16px; /* Diminui o tamanho da fonte do botão para economizar espaço */
+    }
+
     /*RODAPÉ*/
 
     footer .flex {
@@ -1958,3 +2013,62 @@ ul {
     }
 
 }
+
+@media only screen 
+  and (min-device-width: 820px) 
+  and (max-device-width: 820px) 
+  and (min-device-height: 1180px) 
+  and (max-device-height: 1180px) 
+  and (orientation: portrait) {
+    /* Ajustes para o "Transformando ideias em realidade digital" no iPad Air */
+    #typing-animation {
+        font-size: 28px; /* Ajusta o tamanho da fonte para se adequar melhor à tela do iPad */
+        
+        /* Mantém overflow: hidden; */
+    }
+
+
+    .txt-topo-site{
+        margin-left: 9em;
+    }
+
+    .typing-cursor {
+        padding: 0.0em;
+        width: 10px; /* Ajusta a largura do cursor para corresponder ao tamanho de fonte ajustado */
+        height: 1em; /* Ajusta a altura para manter a proporção com o tamanho de fonte ajustado */
+        /* Mantém vertical-align: bottom; */
+        
+        /* Mantém animation: blink 11s infinite; */
+    }
+
+    /* Opcionalmente, ajusta a duração da animação */
+    .typing-cursor {
+        animation: blink 6s infinite; /* Ajusta para uma duração que se adeque melhor ao iPad */
+    }
+
+    section.especiliadades {
+        padding: 20px 4%; /* Ajustei o padding para 20px no topo/bottom */
+    }
+
+    section.especiliadades .flex {
+        gap: 30px; /* Ajustei o gap para 30px */
+    }
+
+    .especiliadades .especialidades-box {
+        padding: 20px; /* Ajustei o padding para 20px */
+        margin-top: 25px; /* Ajustei a margem superior para 25px */
+    }
+
+    .especiliadades .especialidades-box i {
+        font-size: 50px; /* Ajustei o tamanho do ícone para 50px */
+    }
+
+    .especiliadades .especialidades-box h3 {
+        font-size: 20px; /* Ajustei o tamanho da fonte para 20px */
+    }
+
+    .titulo {
+        font-weight: bold;
+    }
+}
+
