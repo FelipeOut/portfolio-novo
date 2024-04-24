@@ -4,7 +4,7 @@
     --background-light: white;
     --text-light: #000;
     /* ou outra cor preta que você deseja */
-    --btn-background-dark: #B71515;
+    --btn-background-dark: #FFC371;
     --btn-text-dark: white;
     --btn-hover-shadow-dark: 0px 0px 8px #740808;
     --menu-background-dark: #000;
@@ -15,7 +15,7 @@
     --form-input-text-light: #000;
     --overlay-menu-background-dark: #000000a7;
     --overlay-menu-background-light: rgba(255, 255, 255, 0.7);
-    --btn-background-dark: #B71515;
+    --btn-background-dark: #FFC371;
     /* Cor vermelha usada no site */
     --background-light-gray: #f2f2f2;
     /* Exemplo de cor cinza claro */
@@ -118,7 +118,7 @@ body {
 
 /* Corrigindo a aplicação das cores do modo claro */
 [data-theme="light"] {
-    --btn-background-dark: #B71515;
+    --btn-background-dark: #FFC371;
     /* Cor do botão no modo claro */
     --menu-background-dark: var(--menu-background-light);
     /* Cor de fundo do menu no modo claro */
@@ -147,28 +147,6 @@ body {
     display: flex;
 }
 
-/* .btn-contato button {
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: white;
-    border: 0;
-    border-radius: 30px;
-    color: #000;
-    cursor: pointer;
-    transition: .2s;
-}
-[data-theme="light"] .button-content button {
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #fff;
-    border: 0;
-    border-radius: 30px;
-    color: #000;
-    cursor: pointer;
-    transition: .2s;
-} */
 
 h2.titulo {
     color: var(--text-dark);
@@ -250,7 +228,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile .btn-fechar i {
-    color: #740808;
+    color: #9d6415;
     font-size: 30px;
 }
 
@@ -267,7 +245,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile nav ul li a:hover {
-    background-color: #740808;
+    background-color: #9d6415;
 
 }
 
@@ -370,7 +348,7 @@ section.topo-do-site .flex {
 
 
 .topo-do-site .txt-topo-site h1 span {
-    color: #740808;
+    color: #9d6415;
     font-size: 84px;
     font-weight: bold;
 }
@@ -479,12 +457,12 @@ section.especiliadades .flex {
 
 .especiliadades .especialidades-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #5f1414;
+    box-shadow: 0 0 20px #9d6415;
 }
 
 .especiliadades .especialidades-box i {
     font-size: 70px;
-    color: #B71515;
+    color: #FFC371;
     font-weight: bold;
 }
 
@@ -522,7 +500,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre h2 span {
-    color: #B71515;
+    color: #FFC371;
     font-weight: bold;
     display: block;
 }
@@ -548,15 +526,15 @@ section.sobre .flex {
 /* ESTILO PORTFOLIO*/
 
 section.portfolio {
-    padding: 90px 10%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
+    padding: 70px 7%;
+    box-shadow: 0 0 70px 7px #ffffff1d;
 
 }
 
 section.portfolio .flex {
     justify-content: space-around;
-    margin-top: 100px;
-    gap: 15px;
+    margin-top: 80px;
+    gap: 20px;
 }
 
 .img-port {
@@ -1025,9 +1003,9 @@ a {
 }
 
 .miniaturas img.ativa {
-    border: 2px solid #B71515;
+    border: 2px solid #FF5F6D;
     /* Cor de destaque */
-    box-shadow: 0 0 8px #B71515;
+    box-shadow: 0 0 8px #FF5F6D;
     /* Sombra leve */
 }
 
@@ -1125,7 +1103,7 @@ a {
 /* ESTILO DO FORMULARIO*/
 
 section.formulario {
-    padding: 20px 5%;
+    padding: 40px 5%;
 }
 
 section .titulo {
@@ -1166,7 +1144,7 @@ form {
 .form-container {
     width: 400px;
     background: linear-gradient(#212121, #212121) padding-box,
-        linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+        linear-gradient(145deg, transparent 35%, #FF5F6D, #FFC371) border-box;
     border: 2px solid transparent;
     padding: 32px 24px;
     font-size: 14px;
@@ -1247,12 +1225,12 @@ form {
 
 .form-container .form-group input:focus {
     outline: none;
-    border-color: #e81cff;
+    border-color: #FF5F6D;
 }
 
 .form-container .form-group textarea:focus {
     outline: none;
-    border-color: #e81cff;
+    border-color: #FF5F6D;
 }
 
 .form-container .form-submit-btn {
@@ -1268,6 +1246,7 @@ form {
     background: #313131;
     border: 1px solid #414141;
     color: white;
+    font-weight: bold;
     /* Opcional: altere a cor do texto se necessário */
     cursor: pointer;
     border-radius: 8px;
@@ -1279,8 +1258,9 @@ form {
 .form-container .form-submit-btn:hover {
     background-color: #ffffff;
     /* Altera a cor de fundo ao passar o mouse */
-    border-color: #e81cff;
-    color: #242424;
+    border-color:#FF5F6D;
+    color: #000000;
+    font-weight: bold;
     /* Opcional: altere a cor do texto ao passar o mouse */
 }
 
@@ -1329,7 +1309,7 @@ footer .line-footer p a {
     margin: 0;
 }
 
-/* Adicione isso ao final do seu arquivo CSS existente */
+
 
 header .switch {
     align-items: center;
@@ -2070,5 +2050,58 @@ ul {
     .titulo {
         font-weight: bold;
     }
+
+    .img-port {
+        width: 350px; /* Tamanho reduzido para iPads */
+        height: 300px;
+        transition: 0.5s; /* Transição mais rápida em dispositivos menores */
+        margin-bottom: 20px;
+        
+    }
+
+    .botao {
+        gap: 10px; /* Define um espaçamento interno */
+        padding: 10px; /* Ajusta o padding para ser consistente */
+        position:absolute;
+        margin: -75% 10px 10px;
+        display: block; /* Garante que o botão seja tratado como um bloco, facilitando o alinhamento */
+    }
+
+    .galeria {
+        display: flex; /* Alterado de 'none' para 'flex' para tornar visível */
+        flex-direction: column; /* Organiza os itens verticalmente */
+        justify-content: center; /* Centraliza verticalmente no espaço disponível */
+        align-items: center; /* Centraliza horizontalmente */
+        padding: 20px 0; /* Ajusta o espaçamento superior e inferior */
+        
+    }
+
+    .conteudo-galeria {
+        width: 90%; /* Ajusta para a largura do conteúdo ser um pouco menor que a tela */
+        margin: 5% auto; /* Mantém o centro alinhado mas com menos margem */
+    }
+
+    .galeria img {
+        max-width: 100%; /* Ajusta a imagem para não ultrapassar a largura da tela */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+     /* Considerando a orientação retrato e o tamanho específico, ajusta os componentes da galeria */
+     .miniaturas-container {
+        overflow-y: auto; /* Permite rolagem vertical para as miniaturas, se necessário */
+        flex-wrap: nowrap; /* Mantém as miniaturas em uma única linha */
+        justify-content: space-around; /* Distribui espaço uniformemente ao redor das miniaturas */
+        padding: 10px; /* Adiciona um pouco de espaço ao redor */
+    }
+
+    .miniaturas img {
+        width: 60px; /* Reduz o tamanho das miniaturas para se encaixarem melhor na tela */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .anterior, .proxima {
+        font-size: 30px; /* Ajusta o tamanho das setas para serem mais visíveis */
+    }
+
 }
 
